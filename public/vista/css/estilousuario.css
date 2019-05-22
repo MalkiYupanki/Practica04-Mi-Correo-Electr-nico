@@ -1,0 +1,33 @@
+#bota{
+    margin: 10px;
+    border-color: black;
+    border-style: solid;
+    margin-left: 1px;
+} 
+form{
+    width: 60%;
+    margin-left: 20%;
+    line-height: 1cm;
+
+}   
+header{
+    margin: 10px;
+    border-color: black;
+    border-style: solid;
+    margin-left: 1px;
+}
+
+#sec1{
+    width: 50%;
+    float: left;
+}
+#sec2{
+    width: 50%;
+    float: left;
+}
+#sec3{
+    margin-top: 4cm;
+    margin-left: 30%;
+    height: 70%;
+    clear: both;
+}
