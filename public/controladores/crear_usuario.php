@@ -65,6 +65,7 @@
 
     if ($conn->query($sql) == TRUE) {
         echo "<p>Se ha creado los datos</p>";
+        header("Location:../vista/login.html");
     } else {
         if ($conn->ermo == 1062) {
             echo "<p class='error'>La perosona con la cedula $cedula ya esta</p>";

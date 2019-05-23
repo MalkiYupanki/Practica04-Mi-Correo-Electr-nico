@@ -1,4 +1,35 @@
-#bota{
+ul {
+    width: 40%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #eb94d0;
+    /* Crear degradados */
+    
+    background-image: -webkit-linear-gradient(top, #eb94d0, #2079b0);
+      background-image: -moz-linear-gradient(top, #eb94d0, #2079b0);
+      background-image: -ms-linear-gradient(top, #eb94d0, #2079b0);
+      background-image: -o-linear-gradient(top, #eb94d0, #2079b0);
+      background-image: linear-gradient(to bottom, #eb94d0, #2079b0);
+  }
+  
+  li {
+    float: left;
+    margin-left: 2%;
+    margin-top: 2%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  li a {
+    display: block;
+    padding: 15px;
+    background-color: #dddddd;
+  }
+
+
+
+  #bota{
     width: 50%;
     margin: 10px;    
     border-style: solid;
@@ -141,6 +172,7 @@ h2{
 #ifm{
     width: 40%;
     margin-left: 70%;
+    
 }
 
 #tmn{
@@ -148,34 +180,7 @@ h2{
     height: 200px;
 }
 
-ul {
-    width: 40%;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background: #eb94d0;
-    /* Crear degradados */
-    
-    background-image: -webkit-linear-gradient(top, #eb94d0, #2079b0);
-      background-image: -moz-linear-gradient(top, #eb94d0, #2079b0);
-      background-image: -ms-linear-gradient(top, #eb94d0, #2079b0);
-      background-image: -o-linear-gradient(top, #eb94d0, #2079b0);
-      background-image: linear-gradient(to bottom, #eb94d0, #2079b0);
-  }
-  
-  li {
-    float: left;
-    margin-left: 2%;
-    margin-top: 2%;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  }
-  
-  li a {
-    display: block;
-    padding: 15px;
-    background-color: #dddddd;
-  }
+
     
 #secin{
     width: 100%;
@@ -210,4 +215,16 @@ a{
     width: 50%;
     background-color: #2079b0;
    
+}
+table{
+    background-color: white;
+}
+#dtl{
+    margin-top: 3%;
+
+}
+
+#cvd{
+    width: 50%;
+    margin-left: 19%;
 }

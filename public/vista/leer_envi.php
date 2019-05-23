@@ -14,16 +14,16 @@
 
 <body class="fondo">
     <section id="sect">
+        <?php
+        session_start();
+        echo "mensaje -----";
+        $cone = $_GET["cone"];
+        ?>
         <div class="cb">
-            <?php
-            session_start();
-            echo "mensaje -----";
-            $cone = $_GET["cone"];
-            ?>
             <header>
                 <nav>
                     <ul>
-                        <li> <a href="../../admin/vista/usuario/index_usuario.php?cone='<?php echo $cone; ?>'">ATRAS</a> </li>
+                        <li> <a href="mensajes_enviados.php?cone=<?php echo $cone; ?>">ATRAS</a> </li>
                     </ul>
                 </nav>
 
@@ -42,7 +42,6 @@
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 ?>
-
                 <form id="formulario01" method="POST" action="../../controladores/controlador_eliminar.php">
 
                     <input type="hidden" id="codigo" name="codigo" value="<?php echo $cedula ?>" />
@@ -51,20 +50,15 @@
                     <input type="text" id="fecha" name="fecha" value="<?php echo $row["men_fecha"]; ?>" disabled />
                     <br>
 
-                    <label for='Remitente'>Remitente (*)</label>
-                    <input type="text" id="remitente" name="remitente" value="<?php echo $row["men_remitente"]; ?>" disabled />
+                    <label for='Destinatario'>Destinatario (*)</label>
+                    <input type="text" id="destinatario" name="destinatario" value="<?php echo $row["men_destinatario"]; ?>" disabled />
                     <br>
                     <label for='Asunto'>Asunto (*)</label>
                     <input type="text" id="asunto" name="asunto" value="<?php echo $row["men_asunto"]; ?>" disabled />
                     <br>
-
-
-
                     <label for="Contenido">Mensjae (*)</label>
                     <input type="text" id="contenido" name="contenido" value="<?php echo $row["men_contenido"]; ?>" disabled />
                     <br>
-
-
                     <input type="reset" id="cancelar" name="cancelar" value="Cancelar" />
                 </form>
 

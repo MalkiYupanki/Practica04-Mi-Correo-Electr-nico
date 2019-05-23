@@ -12,49 +12,49 @@
 
 </head>
 
-<body id="bota">
+<body class="fondo">
+    <section id="sect">
+        <div class="nvm">
+            <?php
+            $cone = $_GET["cone"];
+            //echo $cone;
+            ?>
+            <header>
+                <h1>NUEVO MENSAJE</h1>
+            </header>
+        </div>
+        
+        <div id="nvm">
+            <form action="controlador_mensaje.php" method="POST">
 
-    <?php
-    $cone = $_GET["cone"];
-    //echo $cone;
-    ?>
-    <header>
-        <h1>NUEVO MENSAJE</h1>
-    </header>
-    <div>
-        <table style="width:50%" border>
-            <tr>
-                <th><a href="../../admin/vista/usuario/index_usuario.php?cone='<?php echo $cone; ?>'">ATRAS</a></th>
-            </tr>
+                <legend>Mensaje (*)</legend>
 
-        </table>
-    </div>
-    <form action="controlador_mensaje.php" method="POST">
+                <input type="hidden" id="remitente" name="remitente" value="<?php echo $cone ?>" />
 
-        <legend>Mensaje (*)</legend>
+                <label id="Destinatario">Para :</label>
+                <input type="text" name="destinatario" />
+                <br>
+                <label id="Asunto">Asunto :</label>
+                <input type="text" name="asunto" />
+                <br>
+                <label id="Mensaje">Mensaje</label>
+                <input class="pl" type="text" name="mensaje" />
+                <br>
 
-        <input type="hidden" id="remitente" name="remitente" value="<?php echo $cone ?>" />
-
-        <label id="Destinatario">Para :</label>
-        <input type="text" name="destinatario" />
-        <br>
-        <label id="Asunto">Asunto :</label>
-        <input type="text" name="asunto" />
-        <br>
-        <label id="Mensaje">Mensaje</label>
-        <input type="text" name="mensaje" />
-        <br>
-
-        <input class="btn" id="guargar" name="guardar" type="submit" value="Eniviar">&nbsp;
-        <input class="btn" id="borrar" name="borrar" type="Reset" value="Borrar">
-
-    </form>
-    <footer>
-        <span> Medina Malki Katari &nbsp;
-            &#8226; Universidad Pilitecnica salesiana &#8226; <br />
-            <a href="mailto:malkiyupanki12@hotmail.com">malkiyupanki12@hotmail.com</a>&nbsp;&nbsp;Telefono:&nbsp;<a href="tel:098-286-5431">098-286-5431 </a>
-            &nbsp; &copy; Todos los derechos Reservados.</span>
-    </footer>
+                <div id="mdv">
+                <input class="btn" id="guargar" name="guardar" type="submit" value="Eniviar">&nbsp;
+                <input class="btn" id="borrar" name="borrar" type="Reset" value="Borrar">
+                <button type="button" class="btn btn-default"><a href="../../admin/vista/usuario/index_usuario.php?cone='<?php echo $cone; ?>'">CANCELAR</a></button>
+                </div>
+            </form>
+        </div>
+        <footer  id="ft">
+            <span> Medina Malki Katari &nbsp;
+                &#8226; Universidad Pilitecnica salesiana &#8226; <br />
+                <a href="mailto:malkiyupanki12@hotmail.com">malkiyupanki12@hotmail.com</a>&nbsp;&nbsp;Telefono:&nbsp;<a href="tel:098-286-5431">098-286-5431 </a>
+                &nbsp; &copy; Todos los derechos Reservados.</span>
+        </footer>
+    </section>
 </body>
 
 </html>

@@ -18,6 +18,7 @@
     $telefono = isset($_POST["telefono"]) ? trim($_POST["telefono"]) : null;
     $correo = isset($_POST["correo"]) ? trim($_POST["correo"]) : null;
     $fechaNacimiento = isset($_POST["fechaNacimiento"]) ? trim($_POST["fechaNacimiento"]) : null;
+    $usuco = $_POST["usuco"];  
 
     date_default_timezone_set("America/Guayaquil");
     $fecha = date('Y-m-d H:i:s', time());
@@ -35,6 +36,7 @@
 
     if ($conn->query($sql) === TRUE) {
         echo "Se ha actualizado los datos personales correctamemte!!!<br>";
+        header("Location:../vista/usuario/index.php?cone=$usuco");
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn) . "<br>";
     }

@@ -15,6 +15,7 @@
     $codigo = $_POST["codigo"];
     $contrasena1 = isset($_POST["contrasena1"]) ? trim($_POST["contrasena1"]) : null;
     $contrasena2 = isset($_POST["contrasena2"]) ? trim($_POST["contrasena2"]) : null;
+    $usuco = $_POST["usuco"];
     echo ("$codigo");
     echo ("$contrasena1");
 
@@ -31,6 +32,8 @@
 
         if ($conn->query($sqlContrasena2) === TRUE) {
             echo "Se ha actualizado la contraseña correctamemte!!!<br>";
+            header("Location:../vista/usuario/index.php?cone=$usuco");
+
         } else {
             echo "<p>Error: " . mysqli_error($conn) . "</p>";
             echo ("error de update");

@@ -11,7 +11,6 @@
 
 <body class="fondo">
     <section id="secin">
-
         <div class="cb">
             <header>
                 <?php
