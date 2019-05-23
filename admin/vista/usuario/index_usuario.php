@@ -5,50 +5,62 @@
     <meta charset="utf-8" />
     <title>Gestion de Usuarios</title>
     <script type="text/javascript" src="../../../public/vista/ajax.js"></script>
+    <link href="../../../public/vista/css/estilousuario.css" rel="stylesheet" type="text/css" />
 
 </head>
 
-<body>
-    <section>
-        <header>
-            <?php
-            include '../../../config/conexionBD.php';
-            $cone = $_GET["cone"];
-            //   echo $cone;
-            $tm = strlen($cone);
-            //   echo "mensaje- --- --";
-            $ref = substr($cone, 1, $tm - 2);
-            //   echo $ref;
-            $sqlusu = "SELECT * FROM usuario WHERE usu_correo ='$ref'";
-            $result = $conn->query($sqlusu);
-            $rl = mysqli_fetch_assoc($result);
-            $rlt = $rl["usu_imagen"];
-            ?>
-            <table style="width:50%" border>
-                <tr>
-                    <th><a href="../../../config/cerra_sesion.php">Inicio</a></th>
-                    <th><a href="../../../public/vista/nuevo_mensaje.php?cone=<?php echo $ref; ?>">Nuevo Mensaje</a></th>
-                    <th><a href="../../../public/vista/mensajes_enviados.php?cone=<?php echo $ref; ?>">Mensajes Enviados</a></th>
-                    <th><a href="../../../public/vista/mi_cuenta.php?cone=<?php echo $ref; ?>">Mi Cuenta</a></th>
-                </tr>
-            </table>
-            <div>
-                <img src="../../../imagenes/<?php echo $rlt; ?>" alt="" />
-            </div>
-            <a href='../../../public/vista/login.html'>Cerrar cesion</a>
-        </header>
-    </section>
-    <form onsubmit="return buscarcedua()">
+<body class="fondo">
+    <section id="secin">
+
+        <div class="cb">
+            <header>
+                <?php
+                include '../../../config/conexionBD.php';
+                $cone = $_GET["cone"];
+                //   echo $cone;
+                $tm = strlen($cone);
+                //   echo "mensaje- --- --";
+                $ref = substr($cone, 1, $tm - 2);
+                //   echo $ref;
+                $sqlusu = "SELECT * FROM usuario WHERE usu_correo ='$ref'";
+                $result = $conn->query($sqlusu);
+                $rl = mysqli_fetch_assoc($result);
+                $rlt = $rl["usu_imagen"];
+                $nm =  $rl["usu_nombres"];
+                $ap =  $rl["usu_apellidos"];
+                ?>
+            
+                <nav>
+                    <ul>
+                        <li> <a href="../../../config/cerra_sesion.php">Inicio</a> </li>
+                        <li> <a href="../../../public/vista/nuevo_mensaje.php?cone=<?php echo $ref; ?>">Nuevo Mensaje</a> </li>
+                        <li> <a href="../../../public/vista/mensajes_enviados.php?cone=<?php echo $ref; ?>">Mensajes Enviados</a> </li>
+                        <li> <a href="../../../public/vista/mi_cuenta.php?cone=<?php echo $ref; ?>">Mi Cuenta</a> </li>
+                    </ul>
+                </nav>
+             
+            </header>
+        </div>
+
+        <div id="ifm">
+            <img id="tmn" src="../../../imagenes/<?php echo $rlt; ?>" alt="" />
+            <br>
+            <label id="cnt"><?php echo $nm;
+                    echo "&nbsp;&nbsp;&nbsp;";
+                    echo $ap ?></label>
+        </div>
+        <br>
         <input type="text" id="correobus" name="correobus" value="">
         <input type="button" id="buscar" name="buscar" value="buscar" onclick="buscarcedula()">
-        <div id="informacion"><br>Mensajes<br>
-            <table style="width:100%" border>
+        <br>
+        <div id="informacion">
+            <h2>Mensajes</h2>
+            <table style="width:100%" border class="tblk">
                 <tr>
                     <th>FECHA</th>
                     <th>REMITENTE</th>
                     <th>ASUNTO</th>
-                    <th>.</th>
-
+                    <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
                 </tr>
                 <?php
                 include '../../../config/conexionBD.php';
@@ -72,11 +84,12 @@
                 }
 
                 $conn->close();
-
                 ?>
             </table>
         </div>
-    </form>
+
+    </section>
+
 </body>
 
 </html>

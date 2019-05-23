@@ -6,26 +6,29 @@
           Author: Malki Yupanki  
           Date:   Abril 2019 -->
     <meta charset="utf-8" />
-    <title>Insertar</title>
+    <title>LOGIN</title>
     <link href="css/estilousuario.css" rel="stylesheet" type="text/css" />
     <!--   <link href="css/estilo.css" rel="stylesheet" type="text/css"/>-->
 
 </head>
 
-<body id="bota" class="fondo">
-    <header>
-        <h1>CONSULTA DE DATOS</h1>
+<body  class="fondo">
+    <section id="bota">
+    <div id="mih">
+    <header >
+            <MARQUEE><h1>INICIO</h1></MARQUEE>
     </header>
+    </div>
     <form action="../controladores/login.php" method="POST">
-        <div id="esdiv">
-        <label id="Correo">Correo</label>
+        
+        <label id="Correo" class="mlb">Correo</label>
         <input type="email" name="correo" value="@" />
         <br>
-        <label id="Contrasena">Contraseña</label>
+        <label id="Contrasena" class="mlb">Contraseña</label>
         <input type="password" name="contrasena" />
         <br>
-
-        <input class="btn" id="guargar" name="guardar" type="submit" value="Guardar">&nbsp;
+        <div id="mdv">
+        <input class="btn" id="guargar" name="guardar" type="submit" value="Aceptar">&nbsp;
         <input class="btn" id="borrar" name="borrar" type="Reset" value="Borrar">
         </div>
     </form>
@@ -36,6 +39,7 @@
                 href="tel:098-286-5431">098-286-5431 </a>
             &nbsp; &copy; Todos los derechos Reservados.</span>
     </footer>
+    </section>
 </body>
 
 </html>
