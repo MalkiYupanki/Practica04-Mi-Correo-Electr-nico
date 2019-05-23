@@ -8,6 +8,7 @@
     <meta charset="utf-8" />
     <title>Mensaje</title>
     <link href="css/estilousuario.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="validar.js"></script>
     <!--   <link href="css/estilo.css" rel="stylesheet" type="text/css"/>-->
 
 </head>
@@ -32,7 +33,8 @@
                 <input type="hidden" id="remitente" name="remitente" value="<?php echo $cone ?>" />
 
                 <label id="Destinatario">Para :</label>
-                <input type="text" name="destinatario" />
+                <input type="text"  id="destinatario" name="destinatario" onkeyup=""/>
+                <span id="correocorrecto"></span>
                 <br>
                 <label id="Asunto">Asunto :</label>
                 <input type="text" name="asunto" />
