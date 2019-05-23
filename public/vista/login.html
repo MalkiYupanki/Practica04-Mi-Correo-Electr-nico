@@ -12,12 +12,12 @@
 
 </head>
 
-<body id="bota">
+<body id="bota" class="fondo">
     <header>
         <h1>CONSULTA DE DATOS</h1>
     </header>
     <form action="../controladores/login.php" method="POST">
-
+        <div id="esdiv">
         <label id="Correo">Correo</label>
         <input type="email" name="correo" value="@" />
         <br>
@@ -27,9 +27,9 @@
 
         <input class="btn" id="guargar" name="guardar" type="submit" value="Guardar">&nbsp;
         <input class="btn" id="borrar" name="borrar" type="Reset" value="Borrar">
-
+        </div>
     </form>
-    <footer>
+    <footer id="ft">
         <span> Medina Malki Katari &nbsp;
             &#8226; Universidad Pilitecnica salesiana &#8226; <br />
             <a href="mailto:malkiyupanki12@hotmail.com">malkiyupanki12@hotmail.com</a>&nbsp;&nbsp;Telefono:&nbsp;<a

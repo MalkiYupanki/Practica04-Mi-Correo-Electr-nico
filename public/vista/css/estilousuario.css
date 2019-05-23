@@ -1,15 +1,50 @@
 #bota{
+    width: 60%;
     margin: 10px;
     border-color: black;
     border-style: solid;
-    margin-left: 1px;
+    margin-left: 20%;
+    border-radius: 10px 10px 10px 10px;
+
 } 
+.fondo{
+    background-image: url("fondo.png");
+    background-size: 20%;
+    background-repeat: repeat;
+    background-color: transparent;
+    background-position: top;
+    
+}
 form{
     width: 60%;
     margin-left: 20%;
     line-height: 1cm;
+    
+   
 
-}   
+}
+#ft{
+    height: 70%;
+    width: 98.6%;
+    margin-left: 2px;
+    margin-top: 15px;
+    border-width: 5px;
+    border-color: aquamarine;
+    border-style: groove;
+    background-color: aqua;
+    clear: both;
+}
+#esdiv{
+    width: 40%;
+    border-color: black;
+    border-style: solid;
+    margin-left: 30%;
+    padding-left: 4%;
+    margin-bottom: 5%;
+    border-radius: 10px 10px 10px 10px;
+    
+
+} 
 header{
     margin: 10px;
     border-color: black;
